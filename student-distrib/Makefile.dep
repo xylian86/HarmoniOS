@@ -1,0 +1,105 @@
+asm_linkage.o: asm_linkage.S asm_linkage.h
+boot.o: boot.S multiboot.h x86_desc.h types.h
+x86_desc.o: x86_desc.S x86_desc.h types.h
+cursor_graphic.o: cursor_graphic.c lib.h types.h vga_design.h x86_desc.h
+do_syscall.o: do_syscall.c do_syscall.h types.h filesystem/filesys.h \
+  filesystem/../types.h process_crtl.h x86_desc.h asm_linkage.h idt.h \
+  terminal.h devices/keyboard.h devices/../types.h page.h vga_design.h \
+  lib.h devices/speaker.h
+idt.o: idt.c x86_desc.h types.h idt.h lib.h devices/rtc.h \
+  devices/../types.h devices/keyboard.h tests.h asm_linkage.h \
+  do_syscall.h filesystem/filesys.h filesystem/../types.h signal.h \
+  process_crtl.h
+kernel.o: kernel.c multiboot.h types.h x86_desc.h lib.h devices/i8259.h \
+  devices/../types.h debug.h tests.h idt.h devices/rtc.h \
+  devices/keyboard.h page.h filesystem/filesys.h filesystem/../types.h \
+  devices/cursor.h do_syscall.h devices/pit.h terminal.h vga_design.h \
+  status_bar.h pci.h data/desktop.h data/../lib.h cursor_graphic.h \
+  devices/mouse.h devices/../lib.h devices/i8259.h devices/cursor.h \
+  mouse_graphic.h
+lib.o: lib.c lib.h types.h devices/keyboard.h devices/../types.h \
+  devices/cursor.h terminal.h filesystem/filesys.h filesystem/../types.h \
+  process_crtl.h x86_desc.h page.h vga_design.h cursor_graphic.h
+mouse_graphic.o: mouse_graphic.c lib.h types.h vga_design.h x86_desc.h \
+  data/mouse_icon.h data/../types.h
+page.o: page.c page.h types.h x86_desc.h process_crtl.h \
+  filesystem/filesys.h filesystem/../types.h terminal.h \
+  devices/keyboard.h devices/../types.h do_syscall.h vga_design.h lib.h
+pci.o: pci.c pci.h lib.h types.h vga_design.h x86_desc.h rtl8139.h
+process_ctrl.o: process_ctrl.c process_crtl.h types.h \
+  filesystem/filesys.h filesystem/../types.h x86_desc.h do_syscall.h \
+  terminal.h devices/keyboard.h devices/../types.h lib.h page.h \
+  asm_linkage.h idt.h timer.h signal.h
+rtl8139.o: rtl8139.c rtl8139.h lib.h types.h
+signal.o: signal.c lib.h types.h signal.h x86_desc.h process_crtl.h \
+  filesystem/filesys.h filesystem/../types.h do_syscall.h idt.h
+status_bar.o: status_bar.c lib.h types.h status_bar.h data/vga_char.h \
+  data/../types.h vga_design.h x86_desc.h process_crtl.h \
+  filesystem/filesys.h filesystem/../types.h terminal.h \
+  devices/keyboard.h devices/../types.h timer.h data/terminal_icon.h \
+  data/minimize.h data/../status_bar.h
+terminal.o: terminal.c terminal.h types.h filesystem/filesys.h \
+  filesystem/../types.h devices/keyboard.h devices/../types.h \
+  devices/cursor.h lib.h process_crtl.h x86_desc.h page.h do_syscall.h \
+  vga_design.h status_bar.h data/desktop.h data/../lib.h mouse_graphic.h \
+  devices/mouse.h devices/../lib.h devices/i8259.h devices/cursor.h
+tests.o: tests.c tests.h x86_desc.h types.h lib.h devices/rtc.h \
+  devices/../types.h devices/keyboard.h devices/i8259.h \
+  filesystem/filesys.h filesystem/../types.h terminal.h do_syscall.h \
+  process_crtl.h
+timer.o: timer.c timer.h lib.h types.h filesystem/filesys.h \
+  filesystem/../types.h
+vga_design.o: vga_design.c vga_design.h lib.h types.h x86_desc.h \
+  process_crtl.h filesystem/filesys.h filesystem/../types.h terminal.h \
+  devices/keyboard.h devices/../types.h data/vga_char.h data/../types.h \
+  data/color.h data/../lib.h data/../vga_design.h status_bar.h \
+  devices/mouse.h devices/../lib.h devices/i8259.h devices/cursor.h \
+  mouse_graphic.h data/os.h
+desktop.o: data/desktop.c data/desktop.h data/../lib.h data/../types.h
+minimize.o: data/minimize.c data/minimize.h data/../types.h \
+  data/../status_bar.h
+mouse_icon.o: data/mouse_icon.c data/mouse_icon.h data/../types.h
+os.o: data/os.c data/os.h data/../lib.h data/../types.h
+terminal_icon.o: data/terminal_icon.c data/terminal_icon.h \
+  data/../types.h
+vga_char.o: data/vga_char.c data/vga_char.h data/../types.h
+cursor.o: devices/cursor.c devices/cursor.h devices/../types.h \
+  devices/../lib.h devices/../types.h devices/../process_crtl.h \
+  devices/../filesystem/filesys.h devices/../filesystem/../types.h \
+  devices/../x86_desc.h
+i8259.o: devices/i8259.c devices/i8259.h devices/../types.h \
+  devices/../lib.h devices/../types.h
+keyboard.o: devices/keyboard.c devices/../lib.h devices/../types.h \
+  devices/keyboard.h devices/../types.h devices/i8259.h \
+  devices/scancode.h devices/../terminal.h \
+  devices/../filesystem/filesys.h devices/../filesystem/../types.h \
+  devices/../devices/keyboard.h devices/../page.h \
+  devices/../data/desktop.h devices/../data/../lib.h \
+  devices/../process_crtl.h devices/../x86_desc.h devices/cursor.h \
+  devices/../vga_design.h devices/../lib.h devices/../signal.h \
+  devices/../process_crtl.h devices/../do_syscall.h
+mouse.o: devices/mouse.c devices/mouse.h devices/../lib.h \
+  devices/../types.h devices/i8259.h devices/../types.h devices/cursor.h \
+  devices/../mouse_graphic.h devices/../lib.h devices/../process_crtl.h \
+  devices/../filesystem/filesys.h devices/../filesystem/../types.h \
+  devices/../x86_desc.h devices/../terminal.h \
+  devices/../devices/keyboard.h devices/../devices/../types.h \
+  devices/../vga_design.h devices/../data/desktop.h \
+  devices/../data/../lib.h
+pit.o: devices/pit.c devices/pit.h devices/i8259.h devices/../types.h \
+  devices/../lib.h devices/../types.h devices/../page.h \
+  devices/../process_crtl.h devices/../filesystem/filesys.h \
+  devices/../filesystem/../types.h devices/../x86_desc.h \
+  devices/../signal.h devices/../lib.h devices/../process_crtl.h \
+  devices/../do_syscall.h
+rtc.o: devices/rtc.c devices/rtc.h devices/../types.h devices/i8259.h \
+  devices/../tests.h devices/../lib.h devices/../types.h \
+  devices/../process_crtl.h devices/../filesystem/filesys.h \
+  devices/../filesystem/../types.h devices/../x86_desc.h \
+  devices/../status_bar.h devices/../page.h devices/../cursor_graphic.h \
+  devices/../lib.h
+speaker.o: devices/speaker.c devices/speaker.h devices/../types.h \
+  devices/../lib.h devices/../types.h devices/rtc.h
+filesys.o: filesystem/filesys.c filesystem/filesys.h \
+  filesystem/../types.h filesystem/../lib.h filesystem/../types.h \
+  filesystem/../devices/rtc.h filesystem/../devices/../types.h

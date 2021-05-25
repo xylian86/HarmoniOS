@@ -1,0 +1,24 @@
+#ifndef _OS_H_
+#define _OS_H_
+
+#include "../lib.h"
+
+#define OS_IMAGE_WIDTH 360
+#define OS_IMAGE_HEIGHT 120
+
+#define P_IMAGE_WIDTH 60
+#define P_IMAGE_HEIGHT 48
+
+#define START_IMAGE_WIDTH 240
+#define START_IMAGE_HEIGHT 60
+
+
+extern const uint16_t OS_IMAGE_DATA[OS_IMAGE_WIDTH * OS_IMAGE_HEIGHT];
+extern const uint16_t P1_IMAGE_DATA[P_IMAGE_WIDTH * P_IMAGE_HEIGHT];
+extern const uint16_t P2_IMAGE_DATA[P_IMAGE_WIDTH * P_IMAGE_HEIGHT];
+extern const uint16_t P3_IMAGE_DATA[P_IMAGE_WIDTH * P_IMAGE_HEIGHT];
+extern const uint16_t P4_IMAGE_DATA[P_IMAGE_WIDTH * P_IMAGE_HEIGHT];
+extern const uint16_t P5_IMAGE_DATA[P_IMAGE_WIDTH * P_IMAGE_HEIGHT];
+extern const uint16_t START_IMAGE_DATA[START_IMAGE_WIDTH * START_IMAGE_HEIGHT];
+
+#endif
