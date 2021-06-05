@@ -19,7 +19,7 @@ VGA RELATED
 - Allow to switch VGA mode 16 color and VGA mode 32 color.
 - Provide background picture for desktop.
 - Support animation of system entry.
-- Support using mouse (by clicking **left button**) and keyboard (by pressing **ALT+F1/F2/F3/F4**) to switch different terminals and desktop.
+- Support using mouse (by clicking `left button`) and keyboard (by pressing `ALT+F1/F2/F3/F4`) to switch different terminals and desktop.
 - Support status bar display.
 - Support cursor display.
 
