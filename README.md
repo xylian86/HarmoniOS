@@ -1,5 +1,8 @@
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
+## Overview
+This is the final project for my ECE391 course taken in UIUC. I am fortunated to work with wonderful teammates: Jiaqi Lou, Zhongbo Zhu and [Tianyu Liu](https://ChineseBest.github.io). In this project, we develop the core of an operating system.
+If you want to take a look at the brief demos, please visit http://xinyulian.tech/Project/.
 ACADEMIC INTEGRITY
 -----
 Please review the University of Illinois Student Code before starting,
