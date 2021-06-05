@@ -46,6 +46,19 @@ SYSTEM CALL RELATED
 - Support music play function (**beep**).
 - Support random number generation, whose form is a guessing game (**random**).
 
+## How to run
+
+If using latest QEMU:
+
+`qemu-system-i386 -hda "student-distrib/mp3.img" -m 512 -name test -gdb tcp:127.0.0.1:1234 -soundhw pcspk -soundhw sb16 -serial /dev/ttyUSB0`
+
+If using QEMU provided by this course:
+
+- QEMU VGA needs to be enabled explicitly `-vga std`
+- ACPI doesn't work
+
+`qemu-system-i386 -hda "student-distrib/mp3.img" -m 512 -name test -gdb tcp:127.0.0.1:1234 -soundhw pcspk -soundhw sb16 -serial /dev/ttyUSB0 -vga std`
+
 
 ACADEMIC INTEGRITY
 -----
