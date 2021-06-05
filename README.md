@@ -1,3 +1,5 @@
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 ACADEMIC INTEGRITY
 -----
 Please review the University of Illinois Student Code before starting,
