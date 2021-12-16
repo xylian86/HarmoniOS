@@ -2,7 +2,7 @@
 
 ## Overview
 
-This is the final project for my ECE391 course taken in UIUC. I am fortunated to work with wonderful teammates: Jiaqi Lou, [Zhongbo Zhu](https://github.com/zzb66666666x) and [Tianyu Liu](https://ChineseBest.github.io). In this project, we develop the core of an operating system.                          
+This is the final project for my ECE391 course taken in UIUC. I am fortunated to work with wonderful teammates: Jiaqi Lou, [Zhongbo Zhu](https://github.com/zzb66666666x) and [Tianyu Liu](https://helloworldlty.github.io/). In this project, we develop the core of an operating system.                          
 If you want to take a look at the brief demos, please visit https://xinyulian.tech/project/system-kernel/.
 
 ## Feature
